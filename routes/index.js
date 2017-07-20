@@ -5,5 +5,14 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+router.get('/index', function(req, res, next) {
+    res.render('index', { title: 'Express' });
+});
+router.get('/addApiPage', function(req, res, next) {
+    res.render('addApiPage');
+});
+router.get('/addFunctionPage', function(req, res, next) {
+    res.render('addFunctionPage');
+});
 
 module.exports = router;
