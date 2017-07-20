@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-
+var myconfig=require('./myconfig')
 var app = express();
 
 // view engine setup
@@ -16,6 +16,7 @@ app.set('view engine', 'ejs');
 
 //connect to mongo
 var mongoose=require('mongoose');
+mongoose.connect(myconfig.dbString);
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
